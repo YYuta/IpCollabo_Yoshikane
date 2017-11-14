@@ -1,0 +1,10 @@
+<h1>Blog#new</h1>
+<p>Find me in app/views/blog/new.html.erb</p>
+
+<%= form_for (@post) do |f| %>
+ タイトル
+<%= f.text_field :title, class: "..." %>
+ 本文
+<%= f.text_field :body, class: "..." %>
+<%= f.submit "保存" class: "..." %>
+<% end %>
