@@ -1,3 +1,13 @@
+<!-- <h2>タイトル</h2>
+<p><%= @blog.title %></p>
+<h2>本文</h2>
+<p><%= @blog.body %></p>
+ -->
+
+
+
+
+
 <header>
     <h1 class="headline">
       <%= link_to "CARAVAN", blogs_path %>
@@ -34,11 +44,15 @@
 
   <main class="clearfix">
     <section class="single-blog">
-      <h2 class="blog-headline">Blog</h2>
+      <h2 class="blog-headline">TITLE</h2>
+  <section class="blog-box">
+     <h3 class="blog-title"><%= @blog.title %></h3>
+
+
       <section class="blog-box">
-            <h3 class="blog-box-headline">
+          <!--   <h3 class="blog-box-headline">
               Hopeful lessons from the battle to save rainforests
-            </h3>
+            </h3> -->
 
             <div class="blog-box-content">
               <p class="category">
@@ -50,7 +64,7 @@
             </div>
 
               <div class="single_image"></div>
-              <p class="single_text">
+             <!--  <p class="single_text">
                 The environment of rain forests is ideal for plants: An estimated<br>two-thirds of the world's plant species grow in the rain forest.<br>Plants in the rain forest grow very close together and contend<br>with the constant threat of insect predators. They have adapted <br>
           by making chemicals that researchers have found useful as<br>medicines. Bioprospecting, or going into the rain forest in search<br>of plants that can be used in foods, cosmetics, and medicines,<br>has become big business during the past decade, and the amount<br>that native communities are compensated for this varies from<br>almost nothing to a share in later profits.<br><br>
 
@@ -67,6 +81,10 @@
           also visit orchids, and its seeds are spread by the agouti,<br>
           a small tree mammal.
               </p>
+ -->
+
+ <p><%= @blog.body %></p>
+
 
           <a href="#">編集</a>
           <a href="#">削除</a>

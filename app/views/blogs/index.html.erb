@@ -22,12 +22,12 @@
   <div class="main-visual">
     <div class="main-visual-content">
       <p class="main-visual-text">
-        The world is a book<br>
-        and those who do not travel<br>
-        read only one page.
+        最近、ウォーキング・デッドにハマってます<br>
+        今、シーズン８が絶賛公開中です<br>
+        みなさん是非見てください。
       </p>
       <p class="main-visual-name">
-        St. Augustine
+        Yuta Yoshikane
       </p>
     </div>
   </div>
@@ -42,9 +42,9 @@
           <img class="blog-image">
           <section class="blog-text">
             <h3 class="blog-text-headline">
-              <%= blog.title %>
+             <span><%=link_to blog.title, "/blogs/#{blog.id}" %></span>
 
-            <!--   <a href="single.html">
+           <!--    <a href="single.html">
                 Hopeful lessons from<br>
                 the battle to save<br>
                 rainforests

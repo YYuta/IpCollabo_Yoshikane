@@ -18,6 +18,9 @@ class BlogsController < ApplicationController
   		redirect_to '/blogs' #商品を渡すのをお願いする人
 	end
 
+	def show
+		@blog = Blog.find(params[:id])
+	end
 
 
 	private #この下に書いたものはこのフォルダ内でしか作動しなくなってしまう
