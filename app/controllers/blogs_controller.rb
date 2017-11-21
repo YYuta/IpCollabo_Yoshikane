@@ -22,6 +22,24 @@ class BlogsController < ApplicationController
 		@blog = Blog.find(params[:id])
 	end
 
+	def edit
+    	@blog = Blog.find(params[:id])
+	end
+
+	def update
+    	@blog = Blog.find(params[:id])
+    	@blog.title = params[:title]
+    	@blog.body = params[:body]
+    	@blog.author = params[:author]
+    	@blog.save
+    	redirect_to blog_path(@blog.id)
+ 	end
+
+ 	def destroy
+ 		@blog = Blog.find(params[:id])
+    	@blog.destroy
+    	redirect_to blogs_path
+ 	end
 
 	private #この下に書いたものはこのフォルダ内でしか作動しなくなってしまう
 		def blog_params #ストロングパラメータ

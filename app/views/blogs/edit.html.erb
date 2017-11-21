@@ -1,0 +1,48 @@
+
+
+<header>
+    <h1 class="headline">
+      <a href="#">YUTA</a>
+    </h1>
+    <div class="social">
+      <i class="fa fa-facebook-square"></i>
+      <i class="fa fa-twitter-square"></i>
+      <i class="fa fa-instagram"></i>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="nav-list-item">About</li>
+      <li class="nav-list-item">Topic</li>
+    </ul>
+  </nav>
+
+  <div class="main-visual">
+    <div class="main-visual-content">
+      <p class="main-visual-text">
+        最近、ウォーキング・デッドにハマってます<br>
+        今、シーズン８が絶賛公開中です<br>
+        みなさん是非見てください。
+      </p>
+      <p class="main-visual-name">
+        Yuta Yoshikane
+      </p>
+    </div>
+  </div>
+
+  <main class="clearfix">
+    <section class="blog">
+      <h2 class="blog-headline">投稿を編集する</h2>
+      <div class="blog-box">
+
+
+<%= form_tag update_blog_path(@blog.id), method: 'patch'  do %>
+  <%= text_field_tag :title, @blog.title %>
+  <%= text_area_tag :body, @blog.body %>
+  <%= submit_tag '編集' %>
+<% end %>
+

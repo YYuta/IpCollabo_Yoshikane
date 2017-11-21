@@ -32,12 +32,12 @@
   <div class="main-visual">
       <div class="main-visual-content">
         <p class="main-visual-text">
-          The world is a book<br>
-          and those who do not travel<br>
-          read only one page.
+         最近、ウォーキング・デッドにハマってます<br>
+        今、シーズン８が絶賛公開中です<br>
+        みなさん是非見てください。
         </p>
         <p class="main-visual-name">
-          St. Augustine
+          Yuta Yoshikane
         </p>
       </div>
     </div>
@@ -46,7 +46,10 @@
     <section class="single-blog">
       <h2 class="blog-headline">TITLE</h2>
   <section class="blog-box">
-     <h3 class="blog-title"><%= @blog.title %></h3>
+
+      <h3 class="blog-title">
+        <%= @blog.title %>
+      </h3>
 
 
       <section class="blog-box">
@@ -83,12 +86,16 @@
               </p>
  -->
 
- <p><%= @blog.body %></p>
+          <p class="single_text">
+              <%= @blog.body %>
+          </p>
 
+          <%= link_to "編集", edit_blog_path(@blog.id), class: "btn edit-btn" %>
+          <%= link_to "削除", destroy_blog_path(@blog.id), method: :delete, class: "btn destroy-btn", "data-confirm" => "本当に削除しますか？" %>
 
-          <a href="#">編集</a>
+          <!-- <a href="#">編集</a>
           <a href="#">削除</a>
-
+ -->
           <div class="author_case clearfix">
             <div class="author_image"></div>
               <div class="author_box">
