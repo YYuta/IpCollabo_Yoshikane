@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-
+before_action :authenticate_user!
 	def index #たい焼きをお客様に渡す人 #一覧画面
 
 		@blogs = Blog.all #複数のデータが入ってるからblogs blogでも動く
